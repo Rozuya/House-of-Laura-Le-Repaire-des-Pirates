@@ -1,1 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="House of Laura — Le Repaire des Pirates. Énigmes, trésors, mini-jeux et aventures.">
+    <meta name="theme-color" content="#0b0809">
+
+    <title>House of Laura — Le Repaire des Pirates</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">☠</span>
+
+            <span class="logo-text">
+                <strong>HOUSE OF LAURA</strong>
+                <small>LE REPAIRE DES PIRATES</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu">
+            ☰
+        </button>
+
+        <nav class="navigation" id="navigation">
+
+            <a href="index.html" class="active">
+                🏴‍☠️ Accueil
+            </a>
+
+            <a href="equipage.html">
+                ⚓ Équipage
+            </a>
+
+            <a href="enigmes.html">
+                🧩 Énigmes
+            </a>
+
+            <a href="tresor.html">
+                💰 Trésor
+            </a>
+
+            <a href="carte.html">
+                🗺️ Carte
+            </a>
+
+            <a href="houseoflaura.html">
+                👑 Capitaine
+            </a>
+
+        </nav>
+
+        <a
+            href="https://www.twitch.tv/houseoflaura"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="twitch-button"
+        >
+            🔴 TWITCH
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <p class="hero-eyebrow">
+                    ⚓ BIENVENUE À BORD, MOUSSAILLON
+                </p>
+
+                <h1>
+                    LE TRÉSOR<br>
+                    <span>EST À PORTÉE DE MAIN.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Bienvenue dans l'univers pirate de
+                    <strong>House of Laura</strong>.
+                    Résous des énigmes, découvre des trésors,
+                    joue avec l'équipage et pars à l'aventure
+                    à travers les sept mers.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="enigmes.html" class="button button-gold">
+                        🧩 ÉNIGME DU JOUR
+                    </a>
+
+                    <a href="tresor.html" class="button button-dark">
+                        ☠️ JOUER
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Décor du navire -->
+
+            <div class="hero-ship" aria-hidden="true">
+
+                <div class="moon"></div>
+
+                <div class="mast"></div>
+
+                <div class="sail sail-left">
+                    ☠
+                </div>
+
+                <div class="sail sail-right"></div>
+
+                <div class="ship-body"></div>
+
+            </div>
+
+            <div class="sea"></div>
+
+        </section>
+
+
+        <!-- =========================
+             STATISTIQUES
+        ========================== -->
+
+        <section class="stats">
+
+            <div class="stat">
+
+                <span class="stat-icon">
+                    ☠️
+                </span>
+
+                <strong id="homePoints">
+                    0
+                </strong>
+
+                <small>
+                    DOUBLONS
+                </small>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span class="stat-icon">
+                    🧩
+                </span>
+
+                <strong id="homeRiddles">
+                    0
+                </strong>
+
+                <small>
+                    ÉNIGMES RÉSOLUES
+                </small>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span class="stat-icon">
+                    🏆
+                </span>
+
+                <strong id="homeBest">
+                    0
+                </strong>
+
+                <small>
+                    MEILLEUR SCORE
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             INTRODUCTION
+        ========================== -->
+
+        <section class="home-section introduction">
+
+            <div class="section-title">
+
+                <p class="eyebrow">
+                    🏴‍☠️ LE REPÈRE
+                </p>
+
+                <h2>
+                    ENTRE DANS<br>
+                    <span>L'ÉQUIPAGE</span>
+                </h2>
+
+                <p>
+                    Le navire de House of Laura t'attend.
+                    Explore le repaire et découvre tout ce que
+                    l'équipage prépare pour toi.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <a href="enigmes.html" class="feature-card">
+
+                    <div class="feature-icon">
+                        🧩
+                    </div>
+
+                    <h3>
+                        Les Énigmes
+                    </h3>
+
+                    <p>
+                        Résous l'énigme du jour,
+                        utilise tes indices avec intelligence
+                        et gagne des doublons.
+                    </p>
+
+                    <span>
+                        PARTIR À L'AVENTURE →
+                    </span>
+
+                </a>
+
+
+                <a href="tresor.html" class="feature-card">
+
+                    <div class="feature-icon">
+                        💰
+                    </div>
+
+                    <h3>
+                        Le Trésor Maudit
+                    </h3>
+
+                    <p>
+                        Trois coffres.
+                        Un seul trésor.
+                        Les autres cachent peut-être
+                        un terrible piège...
+                    </p>
+
+                    <span>
+                        CHERCHER LE TRÉSOR →
+                    </span>
+
+                </a>
+
+
+                <a href="carte.html" class="feature-card">
+
+                    <div class="feature-icon">
+                        🗺️
+                    </div>
+
+                    <h3>
+                        La Carte
+                    </h3>
+
+                    <p>
+                        Explore les différentes îles,
+                        découvre les secrets du repaire
+                        et suis les traces de l'équipage.
+                    </p>
+
+                    <span>
+                        EXPLORER LA CARTE →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CAPITAINE
+        ========================== -->
+
+        <section class="captain-preview">
+
+            <div class="captain-decoration">
+                👑
+            </div>
+
+            <div class="captain-content">
+
+                <p class="eyebrow">
+                    👑 LA CAPITAINE DU NAVIRE
+                </p>
+
+                <h2>
+                    HOUSE OF LAURA
+                </h2>
+
+                <p>
+                    La capitaine du repaire pirate.
+                    Toujours prête à embarquer son équipage
+                    pour une nouvelle aventure.
+                </p>
+
+                <a href="houseoflaura.html" class="button button-gold">
+                    DÉCOUVRIR LA CAPITAINE
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ÉQUIPAGE
+        ========================== -->
+
+        <section class="home-section crew-preview">
+
+            <div class="section-title">
+
+                <p class="eyebrow">
+                    ⚓ LES FIDÈLES MOUSSAILLONS
+                </p>
+
+                <h2>
+                    L'ÉQUIPAGE DE<br>
+                    <span>HOUSE OF LAURA</span>
+                </h2>
+
+            </div>
+
+
+            <div class="mini-crew">
+
+                <div class="crew-mini">
+                    <span>🧭</span>
+                    <strong>Rozuya</strong>
+                    <small>Navigateur</small>
+                </div>
+
+                <div class="crew-mini">
+                    <span>⚔️</span>
+                    <strong>DrulySF</strong>
+                    <small>Maître d'Armes</small>
+                </div>
+
+                <div class="crew-mini">
+                    <span>🗺️</span>
+                    <strong>hol_charly</strong>
+                    <small>Cartographe</small>
+                </div>
+
+                <div class="crew-mini">
+                    <span>⚓</span>
+                    <strong>hol_sylvain</strong>
+                    <small>Second</small>
+                </div>
+
+                <div class="crew-mini">
+                    <span>💰</span>
+                    <strong>keeli501</strong>
+                    <small>Gardien du Trésor</small>
+                </div>
+
+                <div class="crew-mini">
+                    <span>🔮</span>
+                    <strong>Brazya</strong>
+                    <small>Voyante</small>
+                </div>
+
+            </div>
+
+            <div class="center-button">
+
+                <a href="equipage.html" class="button button-dark">
+                    ⚓ VOIR TOUT L'ÉQUIPAGE
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TWITCH
+        ========================== -->
+
+        <section class="twitch-section">
+
+            <div class="twitch-inner">
+
+                <p class="eyebrow">
+                    🔴 EN DIRECT DEPUIS LE NAVIRE
+                </p>
+
+                <h2>
+                    REJOINS<br>
+                    <span>HOUSE OF LAURA</span>
+                </h2>
+
+                <p>
+                    La prochaine aventure commence en live.
+                    Monte à bord et rejoins l'équipage sur Twitch.
+                </p>
+
+                <a
+                    href="https://www.twitch.tv/houseoflaura"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="button twitch-big"
+                >
+                    🔴 REGARDER LE LIVE
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            ☠ HOUSE OF LAURA ☠
+        </div>
+
+        <p>
+            « Un pirate ne recule jamais devant un trésor. »
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Accueil
+            </a>
+
+            <a href="equipage.html">
+                Équipage
+            </a>
+
+            <a href="enigmes.html">
+                Énigmes
+            </a>
+
+            <a href="tresor.html">
+                Trésor
+            </a>
+
+            <a href="carte.html">
+                Carte
+            </a>
+
+            <a href="houseoflaura.html">
+                Capitaine
+            </a>
+
+        </div>
+
+        <a
+            href="https://www.twitch.tv/houseoflaura"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-twitch"
+        >
+            Twitch • HouseofLaura
+        </a>
+
+        <small>
+            © 2026 House of Laura — Le Repaire des Pirates
+        </small>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
