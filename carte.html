@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Carte au Trésor — House of Laura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="capitaine.html">La Capitaine</a>
+    <a href="equipage.html">L'Équipage</a>
+    <a href="enigmes.html">Énigmes</a>
+    <a href="jeu.html">Mini-Jeu</a>
+    <a href="carte.html">Carte au Trésor</a>
+  </nav>
+  <div class="container">
+    <h1>🗺️ Carte au Trésor Interactive</h1>
+    <div class="parchment">
+      <p>Clique sur un lieu pour découvrir ce qu'il s'y cache :</p>
+      <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn" onclick="openPopup('Port de Laura', 'C\'est ici que le galion fait escale pour ravitailler la commu !')">⚓ Port de Laura</button>
+        <button class="btn" onclick="openPopup('Île des Énigmes', 'Des trésors intellectuels attendent les esprits les plus affûtés.')">🧩 Île des Énigmes</button>
+        <button class="btn" onclick="openPopup('La Taverne', 'Où le rhum coule à flots et où l\'ambiance du chat fait fureur.')">🍺 La Taverne</button>
+        <button class="btn" onclick="openPopup('QG des Officiers', 'Accès réservé au staff de modération.')">🏰 QG des Officiers</button>
+      </div>
+      <div id="map-popup" style="margin-top: 1.5rem; display: none; padding: 1rem; border: 2px dashed #8b5a2b; background: #fdf6e3; color: #2b1d0c;">
+        <h3 id="popup-title"></h3>
+        <p id="popup-text"></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    function openPopup(title, text) {
+      document.getElementById('popup-title').textContent = title;
+      document.getElementById('popup-text').textContent = text;
+      document.getElementById('map-popup').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
