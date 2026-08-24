@@ -2,27 +2,209 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>House of Laura — La Taverne des Pirates</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="capitaine.html">La Capitaine</a>
-    <a href="equipage.html">L'Équipage</a>
-    <a href="enigmes.html">Énigmes</a>
-    <a href="jeu.html">Mini-Jeu</a>
-    <a href="carte.html">Carte au Trésor</a>
-  </nav>
-  <div class="container">
-    <h1>🏴‍☠️ House of Laura — La Taverne des Pirates</h1>
-    <div class="parchment">
-      <h2>Bienvenue dans le repaire officiel de House of Laura, moussaillon…</h2>
-      <p>Prends une chope de rhum, installe-toi près du feu et découvre l'univers de la Capitaine et de son équipage.</p>
-      <a href="capitaine.html" class="btn">La Capitaine</a>
-      <a href="https://twitch.tv" target="_blank" class="btn">Le Live Twitch</a>
+
+  <!-- EN-TÊTE ET LECTEUR AUDIO -->
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <span class="flag">🏴‍☠️</span>
+        <h1>House of Laura</h1>
+      </div>
+
+      <!-- Widget Audio Immersif -->
+      <div class="audio-player">
+        <audio id="bg-music" src="The Galley's Merry March.mp3" loop></audio>
+        <button id="audio-toggle" class="audio-btn" aria-label="Musique de fond">
+          <span id="audio-icon">🍺</span>
+          <span id="audio-status">Musique : OFF</span>
+        </button>
+        <div class="volume-control">
+          <span>🔊</span>
+          <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation SPA -->
+    <nav>
+      <button class="nav-btn active" data-tab="home">🏠 Accueil</button>
+      <button class="nav-btn" data-tab="capitaine">👑 La Capitaine</button>
+      <button class="nav-btn" data-tab="equipage">⚓ L'Équipage</button>
+      <button class="nav-btn" data-tab="enigme">🧩 Énigme</button>
+      <button class="nav-btn" data-tab="jeu">🎮 Mini-Jeu</button>
+      <button class="nav-btn" data-tab="carte">🗺️ Carte</button>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- SECTION 1 : ACCUEIL -->
+    <section id="home" class="tab-content active">
+      <div class="parchment hero">
+        <h2>Bienvenue dans le repaire officiel de House of Laura, moussaillon…</h2>
+        <p>Prends une chope de rhum au comptoir, écoute le crépitement du feu et explore notre navire. Ici résonnent les rires du chat et les conquêtes de la Capitaine.</p>
+        <div class="actions">
+          <a href="https://twitch.tv" target="_blank" class="btn btn-gold">⚔️ Le Live Twitch</a>
+          <a href="https://discord.gg" target="_blank" class="btn btn-wood">💬 Le Discord</a>
+          <button class="btn btn-parchment" onclick="switchTab('capitaine')">👑 Rencontrer Laura</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 : LA CAPITAINE -->
+    <section id="capitaine" class="tab-content">
+      <div class="parchment">
+        <h2>👑 La Capitaine House of Laura</h2>
+        <p>Navigatrice émérite des mers du streaming, House of Laura tient le barail avec passion, humour et une stratégie affûtée. Que ce soit en pleine tempête sur un jeu intense ou lors d'un apéro chill au port, elle guide son équipage vers la victoire.</p>
+        
+        <div class="goal-container">
+          <h3>Objectif de la Flotte (Subs Twitch)</h3>
+          <div class="progress-bar-bg">
+            <div class="progress-fill" style="width: 90%;">
+              <span>450 / 500 Subs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://twitch.tv" target="_blank" class="btn btn-gold">Twitch</a>
+          <a href="https://discord.gg" target="_blank" class="btn btn-wood">Discord</a>
+          <a href="#" class="btn btn-wood">Twitter / X</a>
+          <a href="#" class="btn btn-wood">YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 : L'ÉQUIPAGE & MODÉRATION -->
+    <section id="equipage" class="tab-content">
+      <h2>⚓ L'Équipage & Modération</h2>
+      <div class="cards-grid">
+        <div class="card captain-card">
+          <div class="card-icon">👑</div>
+          <h3>House of Laura</h3>
+          <p class="role">Capitaine du Navire</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚔️</div>
+          <h3>Rozuya</h3>
+          <p class="role">Premier Second</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📜</div>
+          <h3>DrulySF</h3>
+          <p class="role">Quartermaster</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚓</div>
+          <h3>hol_charly</h3>
+          <p class="role">Maître d'Équipage</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🧭</div>
+          <h3>hol_sylvain</h3>
+          <p class="role">Navigateur</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💣</div>
+          <h3>keeli501</h3>
+          <p class="role">Maître Canonnier</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💰</div>
+          <h3>Brazya</h3>
+          <p class="role">Gardien du Trésor</p>
+        </div>
+      </div>
+
+      <div class="parchment code-box">
+        <h3>📜 Le Code des Pirates</h3>
+        <ul>
+          <li><strong>Respect absolu :</strong> Traite tes camarades de pont avec courtoisie. Aucun comportement toxique n'est toléré.</li>
+          <li><strong>Pas de mutinerie :</strong> Respecte les décisions des Officiers et de la Capitaine.</li>
+          <li><strong>Bonne humeur :</strong> Laisse tes soucis au port et profite de l'ambiance de la taverne.</li>
+          <li><strong>Pas de spam :</strong> Conserve un chat lisible pour l'ensemble des moussaillons.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 4 : L'ÉNIGME DU JOUR -->
+    <section id="enigme" class="tab-content">
+      <div class="parchment">
+        <div class="doubloon-bar">
+          <span>Tes Doublons : <strong id="doubloon-count">0</strong> 🪙</span>
+        </div>
+        <h2>🧩 L'Énigme du Jour</h2>
+        <p class="riddle-text">« Je parle sans bouche et j'entends sans oreilles. Je n'ai pas de corps, mais j'anime les voiles des galions. Que suis-je ? »</p>
+
+        <div class="hints-container">
+          <button class="btn btn-wood" onclick="revealHint(1)">Indice 1</button>
+          <button class="btn btn-wood" onclick="revealHint(2)">Indice 2</button>
+          <button class="btn btn-wood" onclick="revealHint(3)">Indice 3</button>
+        </div>
+
+        <div class="hints-display">
+          <p id="hint-1" class="hint-text"></p>
+          <p id="hint-2" class="hint-text"></p>
+          <p id="hint-3" class="hint-text"></p>
+        </div>
+
+        <div class="riddle-form">
+          <input type="text" id="riddle-input" placeholder="Écris ta réponse ici…">
+          <button class="btn btn-gold" onclick="submitAnswer()">Valider</button>
+        </div>
+        <p id="riddle-feedback" class="feedback-msg"></p>
+      </div>
+    </section>
+
+    <!-- SECTION 5 : MINI-JEU LE TRÉSOR MAUDIT -->
+    <section id="jeu" class="tab-content">
+      <div class="game-header">
+        <h2>🎮 Le Trésor Maudit</h2>
+        <div class="scores">
+          <span>Score actuel : <strong id="game-score">0</strong> 🪙</span>
+          <span>Meilleur score : <strong id="game-best">0</strong> 🪙</span>
+        </div>
+      </div>
+      <p class="game-desc">Clique sur les cases de la grille pour fouiller le sol. Trouve les trésors 💰 (+150), évite les pièges 💀 (-50) et l'eau de mer 🌊 !</p>
+
+      <div id="game-grid" class="grid-4x4"></div>
+
+      <div class="center-btn">
+        <button class="btn btn-gold" onclick="resetGame()">Nouvelle Partie</button>
+      </div>
+    </section>
+
+    <!-- SECTION 6 : CARTE AU TRÉSOR INTERACTIVE -->
+    <section id="carte" class="tab-content">
+      <h2>🗺️ Carte au Trésor Interactive</h2>
+      <p class="center-text">Explore la carte pour découvrir les repères de la flotte :</p>
+      
+      <div class="map-container">
+        <div class="map-bg">
+          <button class="map-pin pin-port" onclick="openModal('Port de Laura', 'C\'est ici que le galion fait escale pour ravitailler la commu en streams, rires et boissons fraîches !')">⚓ Port de Laura</button>
+          <button class="map-pin pin-ile" onclick="openModal('Île des Énigmes', 'Un territoire mystérieux rempli de trésors cachés pour les moussaillons les plus fûts.')">🧩 Île des Énigmes</button>
+          <button class="map-pin pin-taverne" onclick="openModal('La Taverne', 'Le cœur battant du navire. C\'est ici que le chat se rassemble au coin du feu.')">🍺 La Taverne</button>
+          <button class="map-pin pin-qg" onclick="openModal('QG des Officiers', 'Poste de commandement secret réservé à la modération pour garder le cap.')">🏰 QG des Officiers</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL / POPUP MAP -->
+  <div id="modal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="parchment modal-content">
+      <span class="close-btn" onclick="closeModalDirect()">&times;</span>
+      <h3 id="modal-title">Titre</h3>
+      <p id="modal-text">Contenu</p>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
