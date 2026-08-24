@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>L'Énigme du Jour — House of Laura</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="capitaine.html">La Capitaine</a>
+    <a href="equipage.html">L'Équipage</a>
+    <a href="enigmes.html">Énigmes</a>
+    <a href="jeu.html">Mini-Jeu</a>
+    <a href="carte.html">Carte au Trésor</a>
+  </nav>
+  <div class="container">
+    <h1>🧩 L'Énigme du Jour</h1>
+    <p>Tes Doubloons : <span id="doubloon-count">0</span> 🪙</p>
+    <div class="parchment">
+      <p><strong>Énigme :</strong> Je parle sans bouche et j'entends sans oreilles. Je n'ai pas de corps, mais j'anime les voiles. Que suis-je ?</p>
+      <div>
+        <button class="btn" onclick="showHint(1)">Indice 1</button>
+        <button class="btn" onclick="showHint(2)">Indice 2</button>
+        <button class="btn" onclick="showHint(3)">Indice 3</button>
+      </div>
+      <div style="margin: 1rem 0;">
+        <p id="indice-1"></p>
+        <p id="indice-2"></p>
+        <p id="indice-3"></p>
+      </div>
+      <input type="text" id="answer-input" placeholder="Ta réponse..." style="padding: 8px;">
+      <button class="btn" onclick="checkAnswer()">Valider</button>
+      <p id="result-msg" style="font-weight: bold; margin-top: 10px;"></p>
+    </div>
+  </div>
+  <script src="enigmes.js"></script>
+</body>
+</html>
