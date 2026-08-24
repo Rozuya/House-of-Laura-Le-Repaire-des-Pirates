@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Le Trésor Maudit — House of Laura</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <span class="logo-icon">☠</span>
+
+        <span class="logo-text">
+            <strong>HOUSE OF LAURA</strong>
+            <small>LE REPAIRE DES PIRATES</small>
+        </span>
+
+    </a>
+
+
+    <button class="menu-toggle" id="menuToggle">
+        ☰
+    </button>
+
+
+    <nav class="navigation" id="navigation">
+
+        <a href="index.html">🏴‍☠️ Accueil</a>
+        <a href="equipage.html">⚓ Équipage</a>
+        <a href="enigmes.html">🧩 Énigmes</a>
+        <a href="tresor.html" class="active">💰 Trésor</a>
+        <a href="carte.html">🗺️ Carte</a>
+        <a href="houseoflaura.html">👑 Capitaine</a>
+
+    </nav>
+
+
+    <a
+        href="https://www.twitch.tv/houseoflaura"
+        target="_blank"
+        class="twitch-button"
+    >
+        🔴 TWITCH
+    </a>
+
+</header>
+
+
+<main>
+
+<section class="page-hero">
+
+    <p class="eyebrow">
+        💰 L'ÎLE AU TRÉSOR
+    </p>
+
+    <h1>
+        LE TRÉSOR<br>
+        <span>MAUDIT</span>
+    </h1>
+
+    <p>
+        Trois coffres sont devant toi.
+        Un seul contient le véritable trésor.
+    </p>
+
+</section>
+
+
+<section class="treasure-game">
+
+    <div class="game-header">
+
+        <div>
+            <small>NIVEAU</small>
+            <strong id="gameLevel">1</strong>
+        </div>
+
+        <div>
+            <small>TRÉSORS</small>
+            <strong id="gameTreasures">0</strong>
+        </div>
+
+        <div>
+            <small>ESSAIS</small>
+            <strong id="gameTries">3</strong>
+        </div>
+
+    </div>
+
+
+    <div class="game-message">
+
+        <p id="gameMessage">
+            Choisis ton coffre, moussaillon...
+        </p>
+
+    </div>
+
+
+    <div class="chests">
+
+        <button class="treasure-chest" data-chest="0">
+            🧰
+            <span>COFFRE I</span>
+        </button>
+
+        <button class="treasure-chest" data-chest="1">
+            🧰
+            <span>COFFRE II</span>
+        </button>
+
+        <button class="treasure-chest" data-chest="2">
+            🧰
+            <span>COFFRE III</span>
+        </button>
+
+    </div>
+
+
+    <button
+        id="restartGame"
+        class="button button-gold hidden"
+    >
+        🔄 NOUVELLE PARTIE
+    </button>
+
+</section>
+
+
+<section class="home-section">
+
+    <div class="section-title">
+
+        <p class="eyebrow">
+            ☠️ RÈGLES DU TRÉSOR
+        </p>
+
+        <h2>
+            PRENDS GARDE<br>
+            AUX <span>PIÈGES</span>
+        </h2>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                💰
+            </div>
+
+            <h3>
+                Le trésor
+            </h3>
+
+            <p>
+                Trouve le bon coffre pour gagner
+                des doublons.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                💀
+            </div>
+
+            <h3>
+                Les pièges
+            </h3>
+
+            <p>
+                Une mauvaise décision te fera perdre
+                un essai.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                📈
+            </div>
+
+            <h3>
+                Les niveaux
+            </h3>
+
+            <p>
+                Plus tu avances, plus les récompenses
+                deviennent importantes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        ☠ HOUSE OF LAURA ☠
+    </div>
+
+    <p>
+        « Le plus grand trésor est celui que l'on trouve soi-même. »
+    </p>
+
+    <a
+        href="https://www.twitch.tv/houseoflaura"
+        target="_blank"
+        class="footer-twitch"
+    >
+        Twitch • HouseofLaura
+    </a>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/tresor.js"></script>
+
+</body>
+
+</html>
